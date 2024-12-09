@@ -7,6 +7,7 @@ for((i=60000; i<=63000; i++));do
   done
   primos+=("$i")
 done
+
 for((l=0; l<${#primos[@]}; l++)); do
   printf "%-8d" ${primos[l]}
   if [ $(((l+1)%10)) -eq 0 ]; then

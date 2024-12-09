@@ -1,0 +1,69 @@
+Exemplos de uso:
+
+ex01.sh:
+As explicações e modificações do código estão nos comentários do script.
+
+ex02.sh:
+As explicações e modificações do código estão nos comentários do script.
+
+ex03.sh:
+As explicações e modificações do código estão nos comentários do script.
+
+ex04.sh:
+As explicações e modificações do código estão nos comentários do script.
+
+ex05.sh:
+Digite "./ex05.sh".
+
+ex06.sh:
+Digite "./ex06.sh".
+
+ex07_1.sh:
+Digite "./ex07_1.sh report.txt".
+O arquivo teste_1.txt será criado.
+
+ex07_2.sh:
+Digite "./ex07_2.sh report.txt".
+O arquivo teste_2.txt será criado.
+
+ex07_3.sh:
+Digite "./ex07_3.sh teste_1.txt".
+O arquivo sem_linha.txt será criado.
+
+ex08.sh:
+Digite "./ex08.sh <texto a ser invertido>"
+
+ex09.sh:
+Digite "./ex09.sh"
+
+ex10.sh:
+Modifique o script com o nome do usuário em "/home/aldemir" e digite "./ex10.sh".
+
+ex11.sh:
+Digite "./ex11.sh <PID> <tempo><sufixo>"
+Os sufixos podem ser:
+s: segundos (padrão caso não seja digitado um sufixo)
+m: minutos
+h: horas
+d: dias
+
+ex12.sh:
+Digite "./ex12.sh"
+O script levou aproximadamente 40 segundos para executar em um laptop i5 de 6ª geração:
+real    0m40.194s
+user    0m40.344s
+sys     0m0.000s
+
+ex13.sh:
+Digite "./ex13.sh 0" para exibir a data e os números sorteados no stdout
+Digite "./ex13.sh 1" para salvar a data e os números sorteados no arquivo numeros.txt
+
+ex14.sh:
+Digite "ex14.sh <inteiro ou string>", depois digite "echo $?" para visualizar o retorno da função.
+
+ex20_cifrar.sh:
+Digite "ex20_cifrar.sh <texto a ser cifrado> <chave>"
+
+ex20_decifrar.sh:
+Digite "ex20_decifrar.sh <texto a ser decifrado> <chave>"
+

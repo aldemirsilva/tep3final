@@ -11,6 +11,7 @@ while((${#numeros[@]} < 5)); do
 done
 
 if [[ "$1" -eq 0 ]]; then
+  date
   for((l=0; l<${#numeros[@]}; l++)); do
     printf "%d " ${numeros[l]}
   done
