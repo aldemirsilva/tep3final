@@ -61,9 +61,11 @@ Digite "./ex13.sh 1" para salvar a data e os números sorteados no arquivo numer
 ex14.sh:
 Digite "ex14.sh <inteiro ou string>", depois digite "echo $?" para visualizar o retorno da função.
 
+ex18.sh:
+Digite "./ex18.sh"
+
 ex20_cifrar.sh:
 Digite "ex20_cifrar.sh <texto a ser cifrado> <chave>"
 
 ex20_decifrar.sh:
 Digite "ex20_decifrar.sh <texto a ser decifrado> <chave>"
-

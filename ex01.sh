@@ -1,7 +1,7 @@
 #!/bin/bash
 for((n=1; n<10000; n++)) # Laço for que torna desnecessária a variável MAX do código original e itera de 1 a 9999
   do
-    if [ $((n % 5)) -ne 3 ] || [ $((n % 7)) -ne 4 ] || [ $((n % 9)) -ne 5 ]; then # Estrutura if que subsitui as 3 estruturas if originais. Quando uma das condições é verdadeira a próxima iteração é executada
+    if [ $((n % 5)) -ne 3 ] || [ $((n % 7)) -ne 4 ] || [ $((n % 9)) -ne 5 ]; then # Estrutura if que substitui as 3 estruturas if originais. Quando uma das condições é verdadeira a próxima iteração é executada
       continue # Quando esta linha é executada ocorre a iteração para o próximo número inteiro.
     fi
     break # What happens when you comment out this line? Why?

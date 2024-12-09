@@ -4,6 +4,7 @@ palavraChave="$2"
 declare -a quadrado
 declare -a textoCifrado
 alfabeto="ABCDEFGHIKLMNOPQRSTUVWXYZ"
+tmp=""
 
 localizarNoQuadrado() {
   char=$1
@@ -34,7 +35,7 @@ adicionarAoQuadrado() {
 
 printquadrado() {
   for i in "${!quadrado[@]}"; do
-    if (( i % 5 == 0 )) && (( i != 0 )); then
+    if ((i%5==0))&&((i!=0)); then
       echo
     fi
     printf "%s" "${quadrado[$i]}"
@@ -42,21 +43,19 @@ printquadrado() {
   echo
 }
 
-for ((i = 0; i < ${#palavraChave}; i++)); do
+for ((i=0;i<${#palavraChave};i++)); do
   char="${palavraChave:i:1}"
   adicionarAoQuadrado "$char"
 done
 
-for ((i = 0; i < ${#alfabeto}; i++)); do
+for ((i=0;i<${#alfabeto};i++)); do
   char="${alfabeto:i:1}"
   adicionarAoQuadrado "$char"
 done
 
 printquadrado
 
-tmp=""
-
-for ((i = 0; i < ${#string}; i++)); do
+for ((i=0;i<${#string};i++)); do
   char="${string:i:1}"
 
   char=$(echo "$char" | tr '[:lower:]' '[:upper:]')
@@ -73,13 +72,13 @@ for ((i = 0; i < ${#string}; i++)); do
 
   tmp+="$char"
 
-  if (( ${#tmp} == 2 )); then
+  if ((${#tmp}==2)); then
     textoCifrado+=("$tmp")
     tmp=""
   fi
 done
 
-if (( ${#tmp} == 1 )); then
+if ((${#tmp}==1)); then
   tmp+="X"
   textoCifrado+=("$tmp")
 fi
@@ -96,26 +95,26 @@ for pair in "${textoCifrado[@]}"; do
   localizarNoQuadrado "$char2"
   pos2=$?
 
-  r1=$(( pos1 / 5 ))
-  c1=$(( pos1 % 5 ))
+  r1=$((pos1/5))
+  c1=$((pos1%5))
 
-  r2=$(( pos2 / 5 ))
-  c2=$(( pos2 % 5 ))
+  r2=$((pos2/5))
+  c2=$((pos2%5))
 
-  if (( r1 == r2 )); then
-    c1=$(( (c1 + 4) % 5 ))
-    c2=$(( (c2 + 4) % 5 ))
-  elif (( c1 == c2 )); then
-    r1=$(( (r1 + 4) % 5 ))
-    r2=$(( (r2 + 4) % 5 ))
+  if ((r1==r2)); then
+    c1=$(((c1+4)%5))
+    c2=$(((c2+4)%5))
+  elif ((c1==c2)); then
+    r1=$(((r1+4)%5))
+    r2=$(((r2+4)%5))
   else
     tmp=$c1
     c1=$c2
     c2=$tmp
   fi
 
-  pos1=$(( (r1 * 5) + c1 ))
-  pos2=$(( (r2 * 5) + c2 ))
+  pos1=$(((r1*5)+c1))
+  pos2=$(((r2*5)+c2))
 
   char1="${quadrado[$pos1]}"
   char2="${quadrado[$pos2]}"
