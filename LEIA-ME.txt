@@ -69,3 +69,6 @@ Digite "ex20_cifrar.sh <texto a ser cifrado> <chave>"
 
 ex20_decifrar.sh:
 Digite "ex20_decifrar.sh <texto a ser decifrado> <chave>"
+
+ex22.sh
+Digite "./ex22.sh report.txt"
